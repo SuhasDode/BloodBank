@@ -1,0 +1,19 @@
+CREATE DATABASE bloodbank;
+
+USE bloodbank;
+
+CREATE TABLE users (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(100),
+  email VARCHAR(100) UNIQUE,
+  password VARCHAR(255),
+  is_active BOOLEAN DEFAULT false
+);
+
+CREATE TABLE otp_verifications (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT,
+  otp VARCHAR(10),
+  expires_at DATETIME,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
