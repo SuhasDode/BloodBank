@@ -1,0 +1,93 @@
+.admin-dashboard1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f8fafc, #eef2f7);
+    min-height: 100vh;
+    padding: 10px;
+    padding-bottom: 0%;
+  }
+  
+  .dashboard-header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e293b;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .dashboard-header1 h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 28px;
+    color: #eef2f7;
+  }
+  
+  .logout-btn {
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-btn:hover {
+    background-color: #b91c1c;
+  }
+  
+  .dashboard-content1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    /* align-items: center; */ 
+    text-align: center;
+  }
+  
+  .dashboard-card1 {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    /* height: 50px; */
+    margin: 18px; 
+  }
+  
+  .dashboard-card1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .dashboard-card1 h3 {
+    margin: 15px 0 10px;
+    color: #1e293b;
+  }
+  
+  .dashboard-card1 p {
+    color: #475569;
+    font-size: 14px;
+  }
+  
+  /* Footer */
+  .home-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+  }
+  
+  .history-btn{
+    background-color: #267bdc;
+    font-size: 16px;
+  }

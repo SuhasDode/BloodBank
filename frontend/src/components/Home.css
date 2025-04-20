@@ -29,9 +29,23 @@
     text-decoration: none;
     font-weight: bold;
   }
+
+  .home-header nav ul li button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #d32f2f;
+    border: none;
+    padding-top: 0px;
+  }
   
   .home-header nav ul li a:hover {
     text-decoration: underline;
+  }
+  .home-header nav ul li button:hover {
+    text-decoration: underline;
+    /* cursor: pointer; */
   }
   
   /* Hero Section */

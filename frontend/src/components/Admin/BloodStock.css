@@ -1,0 +1,56 @@
+/* Blood Stock Container */
+.bloodstock-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Headings */
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .alert-heading {
+    color: #d9534f;
+    text-align: center;
+  }
+  
+  /* Table */
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* th {
+    /* background: #f4f4f4; */
+
+  
+  .expiry-date {
+    color: #d9534f;
+    font-weight: bold;
+  }
+  
+  .expiring-row {
+    background: #c99e13;
+  }
+  
+  .expiring-row:hover {
+    background: #ffeeba;
+  }
+  

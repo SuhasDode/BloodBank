@@ -1,8 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import './Home.css';
+// import HeroSection from './HeroSection';
+import FeaturesSection from './FeaturesSection';
+import AboutSection from './AboutSection';
+import StatsSection from './StatsSection';
+// import CTASection from './CTASection';
+import TestimonialsSection from './TestimonialsSection';
+// import Footer from './Footer';
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    console.log("Logging out!");
+    localStorage.removeItem('token'); // or clear context/auth
+    navigate('/login');
+  };
   return (
     <div className="home-container">
       {/* Header */}
@@ -12,8 +26,8 @@ const Home = () => {
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/register">Register</Link></li>
-            <li><Link to="/login">Login</Link></li>
-            <li><Link to="/donors">Find Donor</Link></li>
+            <li><Link to="/login">Login</Link></li> 
+            <li><button onClick={handleLogout}>Logout</button></li>
           </ul>
         </nav>
       </header>
@@ -44,6 +58,31 @@ const Home = () => {
         </div>
       </section>
 
+      <section>
+        <div>
+        <FeaturesSection />
+      </div>
+      </section>
+      <section>
+        <div>
+        <AboutSection />
+      </div>
+      </section>
+      <section>
+        <div>
+        <StatsSection />
+      </div>
+      </section>
+      <section>
+        <div>
+        <TestimonialsSection />
+      </div>
+      </section>
+      {/* <section>
+        <div>
+        <CTASection />
+      </div>
+      </section> */}
       {/* Footer */}
       <footer className="home-footer">
         <p>&copy; 2025 Blood Bank. All rights reserved.</p>

@@ -1,0 +1,70 @@
+.recipient-container {
+    /* max-width: 1000px; */
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .recipient-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .recipient-table-container {
+    overflow-x: auto;
+  }
+  
+  .recipient-table {
+    width: 100%;
+    border-collapse: collapse;
+    /* background-color: #666; */
+  }
+  
+  .recipient-table th, .recipient-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    /* background-color: #666; */
+  }
+  
+  
+  .status {
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  
+  .status.pending { color: orange; }
+  .status.approved { color: green; }
+  .status.rejected { color: red; }
+  .status.completed { color: blue; }
+  
+  button {
+    padding: 6px 12px;
+    margin: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  
+  .approve-btn {
+    background-color: green;
+    color: white;
+  }
+  
+  .reject-btn {
+    background-color: red;
+    color: white;
+  }
+  
+  .complete-btn {
+    background-color: blue;
+    color: white;
+  }
+  
+  .no-data {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+  }
+  

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Login.css'; // import the CSS file
 
 function Login() {
+  const navigate = useNavigate();
   const [form, setForm] = useState({ email: '', password: '' });
   const [loading, setLoading] = useState(false);
 
@@ -11,13 +13,31 @@ function Login() {
     setLoading(true);
     try {
       const res = await axios.post('http://localhost:5000/api/auth/login', form);
-      alert(res.data.message);
+      alert(res.data.message); 
+      
+      // ✅ Save token to localStorage
+      if (res.data.token) {
+        localStorage.setItem('token', res.data.token);
+        console.log('Token saved:', res.data.token);
+      } else {
+        console.warn('No token received in response');
+      }
+  
+      // ✅ Redirect based on role
+      if (res.data.role === 'admin') {
+        navigate('/admin-dashboard');
+      } else if (res.data.role === 'staff') {
+        navigate('/staff-dashboard');
+      } else {
+        navigate('/user-dashboard');
+      }
     } catch (err) {
       alert(err.response?.data?.message || 'An error occurred');
     } finally {
       setLoading(false);
     }
   };
+  
 
   return (
     <div className="login-page">
@@ -67,3 +87,5 @@ function Login() {
 }
 
 export default Login;
+
+

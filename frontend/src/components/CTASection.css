@@ -1,0 +1,21 @@
+.cta-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #e53935;
+    color: white;
+  }
+  
+  .cta-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .cta-section .btn-primary {
+    background-color: #ffffff;
+    color: #e53935;
+  }
+  
+  .cta-section .btn-primary:hover {
+    background-color: #f1f1f1;
+  }
+  
